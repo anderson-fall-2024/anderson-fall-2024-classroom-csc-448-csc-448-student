@@ -1,1 +1,2 @@
-# csc-448-student
+# CSC 448
+Bioinformatics Algorithms
