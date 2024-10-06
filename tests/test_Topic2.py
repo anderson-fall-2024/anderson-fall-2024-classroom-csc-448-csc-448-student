@@ -14,7 +14,7 @@ def test_exercise_1():
     assert Topic2_helper.score("AACCTTGG","ACACTGTGA") == answers['answer_exercise_1']
 
 def test_exercise_2():
-    assert Topic2_helper.score2("AACCTTGG","ACACTGTGA") == answers['answer_exercise_2']
+    assert Topic2_helper.score2("-AAA-CTTGG","---ACAC") == answers['answer_exercise_2']
 
 def test_exercise_3():
     assert Topic2_helper.min_num_coins(27,[6,5,1]) == answers['answer_exercise_3']
