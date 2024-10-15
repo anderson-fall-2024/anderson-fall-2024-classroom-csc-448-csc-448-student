@@ -19,8 +19,12 @@ def test_exercise_1():
 
 def test_exercise_2():
     dB = Topic3_helper.de_bruijn(["AAT","ATG","ATG","ATG","CAT","CCA","GAT","GCC","GGA","GGG","GTT","TAA","TGC","TGG","TGT"])
-    r = nx.adjacency_matrix(dB).todense()
-    assert np.all(r == answers['answer_exercise_2'])
+    #print(answers['answer_exercise_2'])
+    ans = answers['answer_exercise_2']
+    #r = nx.adjacency_matrix(dB)
+    student = Topic3_helper.to_adj(dB)
+    student = student.reindex(index=ans.index,columns=ans.columns)
+    assert np.all(student == ans)
 
 def test_exercise_3():
     G = nx.MultiDiGraph()
