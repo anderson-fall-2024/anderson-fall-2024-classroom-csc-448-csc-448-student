@@ -85,9 +85,15 @@ def additive_phylogeny(D,new_number):
 
     Dtrimmed = D.drop(n).drop(n,axis=1)
     T = additive_phylogeny(Dtrimmed,new_number+1)
-
+    print("\nNode we are adding",n)
+    print("Limb Length",limbLength)
+    print("New number:",new_number)
+    print('Dtrimmed')
+    print(D)
+    print('Start')
+    print(show_adj(T))
     i,k = find(D,n) # Implemented correctly above
-    print(n,i,k)
+    #print(n,i,k)
     #if D.loc[j,n] < D.loc[i,n]:
     #    i,k = k,i
     v = "v%s"%new_number

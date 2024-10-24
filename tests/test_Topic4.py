@@ -38,7 +38,10 @@ def test_exercise_4():
     assert np.all(nx.adjacency_matrix(Topic4_helper.base_case(Topic4_helper.D.iloc[:2,:].iloc[:,:2])).todense() == answers['exercise_4'])
 
 def test_exercise_5():
-    assert np.all(nx.adjacency_matrix(Topic4_helper.additive_phylogeny(Topic4_helper.D,len(Topic4_helper.D)+1)).todense() == answers['exercise_5'])
+    ans = Topic4_helper.show_adj(Topic4_helper.additive_phylogeny(Topic4_helper.D,len(Topic4_helper.D)+1))
+    sol = answers['exercise_5']
+    ans = ans.reindex(index=sol.index,columns=sol.columns)
+    assert np.all(sol.values == ans.values)
 
 def test_exercise_6():
     assert np.all(nx.adjacency_matrix(Topic4_helper.additive_phylogeny(D_sars,len(D_sars)+1)).todense() == answers['exercise_6'])
