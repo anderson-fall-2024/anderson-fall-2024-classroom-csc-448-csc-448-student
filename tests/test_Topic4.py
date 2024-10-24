@@ -44,7 +44,10 @@ def test_exercise_5():
     assert np.all(sol.values == ans.values)
 
 def test_exercise_6():
-    assert np.all(nx.adjacency_matrix(Topic4_helper.additive_phylogeny(D_sars,len(D_sars)+1)).todense() == answers['exercise_6'])
+    ans = Topic4_helper.show_adj(Topic4_helper.additive_phylogeny(D_sars,len(D_sars)+1))
+    sol = answers['exercise_6']
+    ans = ans.reindex(index=sol.index,columns=sol.columns)
+    assert np.all(sol.values == ans.values)
 
 # git clone https://github.com/anderson-github-classroom/csc-448-student ../csc-448-student && sudo -H pip3 install -r ../csc-448-student/requirements.txt
 
