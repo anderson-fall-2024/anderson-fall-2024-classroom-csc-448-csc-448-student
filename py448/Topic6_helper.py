@@ -160,7 +160,6 @@ def shortest_rearrangement_scenario(P,Q):
     G_P = genome_to_graph(P)
     G_Q = genome_to_graph(Q)
     distance = two_break_distance(G_P,G_Q)
-    print(distance)
     Gcombined = combine(G_P,G_Q)
     fig = plt.figure(figsize=(20, 20));
     steps = [print_from_graph(G_P)]

@@ -1,4 +1,4 @@
-import sys
+dimport sys
 sys.path.append(".")
 sys.path.append("..")
 

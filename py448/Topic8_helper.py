@@ -52,8 +52,8 @@ def to_adj(T):
     return df2
 
 def show(G):
-    #display(to_adj(G))
-    #return
+    display(to_adj(G))
+    return
     # same layout using matplotlib with no labels
     pos = nx.drawing.nx_agraph.graphviz_layout(G, prog='neato')
     #print(edge_labels)
